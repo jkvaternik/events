@@ -1,0 +1,940 @@
+Last login: Fri Mar  5 21:01:46 on ttys001
+jaimekvaternik@Jaimes-MBP ~ % ssh jaimek@jk-web.site
+jaimek@jk-web.site's password: 
+Linux jkserver.com 4.19.0-13-amd64 #1 SMP Debian 4.19.160-2 (2020-11-28) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Mar  5 21:02:09 2021 from 108.1.146.231
+jaimek@jkserver:~$ sudo su -
+[sudo] password for jaimek: 
+root@jkserver:~# cd /home/events/
+root@jkserver:/home/events# ls
+cs4550-hw07
+root@jkserver:/home/events# cs4550-hw07
+-bash: cs4550-hw07: command not found
+root@jkserver:/home/events# cd cs4550-hw07
+root@jkserver:/home/events/cs4550-hw07# bash deploy.sh
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Resolving Hex dependencies...
+Dependency resolution completed:
+Unchanged:
+  connection 1.1.0
+  cowboy 2.8.0
+  cowboy_telemetry 0.3.1
+  cowlib 2.9.1
+  db_connection 2.3.1
+  decimal 2.0.0
+  ecto 3.5.8
+  ecto_sql 3.5.4
+  gettext 0.18.2
+  jason 1.2.2
+  mime 1.5.0
+  phoenix 1.5.8
+  phoenix_ecto 4.2.1
+  phoenix_html 2.14.3
+  phoenix_live_dashboard 0.4.0
+  phoenix_live_view 0.15.4
+  phoenix_pubsub 2.0.0
+  plug 1.11.0
+  plug_cowboy 2.4.1
+  plug_crypto 1.2.1
+  postgrex 0.15.8
+  ranch 1.7.1
+  telemetry 0.4.2
+  telemetry_metrics 0.6.0
+  telemetry_poller 0.5.1
+All dependencies are up to date
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+mkdir: cannot create directory '': No such file or directory
+deploy.sh: line 23: pwgen: command not found
+npm WARN npm npm does not support Node.js v10.24.0
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+npm WARN sass-loader@8.0.2 requires a peer of sass@^1.3.0 but none is installed. You must install peer dependencies yourself.
+npm WARN sass-loader@8.0.2 requires a peer of fibers@>= 3.1.0 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/watchpack-chokidar2/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+up to date in 10.386s
+npm WARN npm npm does not support Node.js v10.24.0
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+
+> @ deploy /home/events/cs4550-hw07/assets
+> webpack --mode production
+
+Hash: a35f5e0e8a4e79f10088
+Version: webpack 4.41.5
+Time: 6151ms
+Built at: 03/05/2021 9:27:54 PM
+         Asset       Size  Chunks             Chunk Names
+../css/app.css    141 KiB       0  [emitted]  app
+../favicon.ico   1.23 KiB          [emitted]  
+ ../robots.txt  202 bytes          [emitted]  
+        app.js   2.25 KiB       0  [emitted]  app
+Entrypoint app = ../css/app.css app.js
+[0] multi ./js/app.js 28 bytes {0} [built]
+[1] ./js/app.js 490 bytes {0} [built]
+[2] ./css/app.scss 39 bytes {0} [built]
+[3] ../deps/phoenix_html/priv/static/phoenix_html.js 2.21 KiB {0} [built]
+    + 1 hidden module
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js!node_modules/sass-loader/dist/cjs.js!css/app.scss:
+    Entrypoint mini-css-extract-plugin = *
+    [0] ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./css/app.scss 144 KiB {0} [built]
+        + 1 hidden module
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Check your digested files at "priv/static"
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Release events_board-0.1.0 already exists. Overwrite? [Yn] Y
+* assembling events_board-0.1.0 on MIX_ENV=prod
+* skipping runtime configuration (config/runtime.exs not found)
+* skipping elixir.bat for windows (bin/elixir.bat not found in the Elixir installation)
+* skipping iex.bat for windows (bin/iex.bat not found in the Elixir installation)
+
+Release created at _build/prod/rel/events_board!
+
+    # To start your system
+    _build/prod/rel/events_board/bin/events_board start
+
+Once the release is running:
+
+    # To connect to it remotely
+    _build/prod/rel/events_board/bin/events_board remote
+
+    # To stop it gracefully (you may also send SIGINT/SIGTERM)
+    _build/prod/rel/events_board/bin/events_board stop
+
+To list all commands:
+
+    _build/prod/rel/events_board/bin/events_board
+
+root@jkserver:/home/events/cs4550-hw07# apt install pwgen
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libjs-jquery libjs-jquery-metadata libjs-jquery-tablesorter libsctp1
+Use 'apt autoremove' to remove them.
+The following NEW packages will be installed:
+  pwgen
+0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.
+Need to get 19.5 kB of archives.
+After this operation, 48.1 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian buster/main amd64 pwgen amd64 2.08-1 [19.5 kB]
+Fetched 19.5 kB in 0s (1472 kB/s)
+Selecting previously unselected package pwgen.
+(Reading database ... 65712 files and directories currently installed.)
+Preparing to unpack .../pwgen_2.08-1_amd64.deb ...
+Unpacking pwgen (2.08-1) ...
+Setting up pwgen (2.08-1) ...
+Processing triggers for man-db (2.8.5-2) ...
+root@jkserver:/home/events/cs4550-hw07# bash deploy.sh
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Resolving Hex dependencies...
+Dependency resolution completed:
+Unchanged:
+  connection 1.1.0
+  cowboy 2.8.0
+  cowboy_telemetry 0.3.1
+  cowlib 2.9.1
+  db_connection 2.3.1
+  decimal 2.0.0
+  ecto 3.5.8
+  ecto_sql 3.5.4
+  gettext 0.18.2
+  jason 1.2.2
+  mime 1.5.0
+  phoenix 1.5.8
+  phoenix_ecto 4.2.1
+  phoenix_html 2.14.3
+  phoenix_live_dashboard 0.4.0
+  phoenix_live_view 0.15.4
+  phoenix_pubsub 2.0.0
+  plug 1.11.0
+  plug_cowboy 2.4.1
+  plug_crypto 1.2.1
+  postgrex 0.15.8
+  ranch 1.7.1
+  telemetry 0.4.2
+  telemetry_metrics 0.6.0
+  telemetry_poller 0.5.1
+All dependencies are up to date
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+mkdir: cannot create directory '': No such file or directory
+npm WARN npm npm does not support Node.js v10.24.0
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+npm WARN sass-loader@8.0.2 requires a peer of sass@^1.3.0 but none is installed. You must install peer dependencies yourself.
+npm WARN sass-loader@8.0.2 requires a peer of fibers@>= 3.1.0 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/watchpack-chokidar2/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+up to date in 10.659s
+npm WARN npm npm does not support Node.js v10.24.0
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+
+> @ deploy /home/events/cs4550-hw07/assets
+> webpack --mode production
+
+Hash: a35f5e0e8a4e79f10088
+Version: webpack 4.41.5
+Time: 5437ms
+Built at: 03/05/2021 9:28:39 PM
+         Asset       Size  Chunks             Chunk Names
+../css/app.css    141 KiB       0  [emitted]  app
+../favicon.ico   1.23 KiB          [emitted]  
+ ../robots.txt  202 bytes          [emitted]  
+        app.js   2.25 KiB       0  [emitted]  app
+Entrypoint app = ../css/app.css app.js
+[0] multi ./js/app.js 28 bytes {0} [built]
+[1] ./js/app.js 490 bytes {0} [built]
+[2] ./css/app.scss 39 bytes {0} [built]
+[3] ../deps/phoenix_html/priv/static/phoenix_html.js 2.21 KiB {0} [built]
+    + 1 hidden module
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js!node_modules/sass-loader/dist/cjs.js!css/app.scss:
+    Entrypoint mini-css-extract-plugin = *
+    [0] ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./css/app.scss 144 KiB {0} [built]
+        + 1 hidden module
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Check your digested files at "priv/static"
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Release events_board-0.1.0 already exists. Overwrite? [Yn] Y
+* assembling events_board-0.1.0 on MIX_ENV=prod
+* skipping runtime configuration (config/runtime.exs not found)
+* skipping elixir.bat for windows (bin/elixir.bat not found in the Elixir installation)
+* skipping iex.bat for windows (bin/iex.bat not found in the Elixir installation)
+
+Release created at _build/prod/rel/events_board!
+
+    # To start your system
+    _build/prod/rel/events_board/bin/events_board start
+
+Once the release is running:
+
+    # To connect to it remotely
+    _build/prod/rel/events_board/bin/events_board remote
+
+    # To stop it gracefully (you may also send SIGINT/SIGTERM)
+    _build/prod/rel/events_board/bin/events_board stop
+
+To list all commands:
+
+    _build/prod/rel/events_board/bin/events_board
+
+root@jkserver:/home/events/cs4550-hw07# vim dep
+root@jkserver:/home/events/cs4550-hw07# ls
+README.md  assets  dep	      deps  mix.exs   priv	test
+_build	   config  deploy.sh  lib   mix.lock  start.sh
+root@jkserver:/home/events/cs4550-hw07# rm -rf dep
+root@jkserver:/home/events/cs4550-hw07# vim deploy.sh 
+root@jkserver:/home/events/cs4550-hw07# vim start.sh
+root@jkserver:/home/events/cs4550-hw07# vim deploy.sh 
+root@jkserver:/home/events/cs4550-hw07# bash deploy.sh
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Resolving Hex dependencies...
+Dependency resolution completed:
+Unchanged:
+  connection 1.1.0
+  cowboy 2.8.0
+  cowboy_telemetry 0.3.1
+  cowlib 2.9.1
+  db_connection 2.3.1
+  decimal 2.0.0
+  ecto 3.5.8
+  ecto_sql 3.5.4
+  gettext 0.18.2
+  jason 1.2.2
+  mime 1.5.0
+  phoenix 1.5.8
+  phoenix_ecto 4.2.1
+  phoenix_html 2.14.3
+  phoenix_live_dashboard 0.4.0
+  phoenix_live_view 0.15.4
+  phoenix_pubsub 2.0.0
+  plug 1.11.0
+  plug_cowboy 2.4.1
+  plug_crypto 1.2.1
+  postgrex 0.15.8
+  ranch 1.7.1
+  telemetry 0.4.2
+  telemetry_metrics 0.6.0
+  telemetry_poller 0.5.1
+All dependencies are up to date
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+mkdir: cannot create directory '': No such file or directory
+npm WARN npm npm does not support Node.js v10.24.0
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+npm WARN sass-loader@8.0.2 requires a peer of sass@^1.3.0 but none is installed. You must install peer dependencies yourself.
+npm WARN sass-loader@8.0.2 requires a peer of fibers@>= 3.1.0 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/watchpack-chokidar2/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+up to date in 10.557s
+npm WARN npm npm does not support Node.js v10.24.0
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+
+> @ deploy /home/events/cs4550-hw07/assets
+> webpack --mode production
+
+Hash: a35f5e0e8a4e79f10088
+Version: webpack 4.41.5
+Time: 5465ms
+Built at: 03/05/2021 9:31:32 PM
+         Asset       Size  Chunks             Chunk Names
+../css/app.css    141 KiB       0  [emitted]  app
+../favicon.ico   1.23 KiB          [emitted]  
+ ../robots.txt  202 bytes          [emitted]  
+        app.js   2.25 KiB       0  [emitted]  app
+Entrypoint app = ../css/app.css app.js
+[0] multi ./js/app.js 28 bytes {0} [built]
+[1] ./js/app.js 490 bytes {0} [built]
+[2] ./css/app.scss 39 bytes {0} [built]
+[3] ../deps/phoenix_html/priv/static/phoenix_html.js 2.21 KiB {0} [built]
+    + 1 hidden module
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js!node_modules/sass-loader/dist/cjs.js!css/app.scss:
+    Entrypoint mini-css-extract-plugin = *
+    [0] ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./css/app.scss 144 KiB {0} [built]
+        + 1 hidden module
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Check your digested files at "priv/static"
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Release events_board-0.1.0 already exists. Overwrite? [Yn] Y
+* assembling events_board-0.1.0 on MIX_ENV=prod
+* skipping runtime configuration (config/runtime.exs not found)
+* skipping elixir.bat for windows (bin/elixir.bat not found in the Elixir installation)
+* skipping iex.bat for windows (bin/iex.bat not found in the Elixir installation)
+
+Release created at _build/prod/rel/events_board!
+
+    # To start your system
+    _build/prod/rel/events_board/bin/events_board start
+
+Once the release is running:
+
+    # To connect to it remotely
+    _build/prod/rel/events_board/bin/events_board remote
+
+    # To stop it gracefully (you may also send SIGINT/SIGTERM)
+    _build/prod/rel/events_board/bin/events_board stop
+
+To list all commands:
+
+    _build/prod/rel/events_board/bin/events_board
+
+root@jkserver:/home/events/cs4550-hw07# vim deploy.sh
+root@jkserver:/home/events/cs4550-hw07# vim start.sh
+root@jkserver:/home/events/cs4550-hw07# vim deploy.sh
+root@jkserver:/home/events/cs4550-hw07# bash deploy.sh
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Resolving Hex dependencies...
+Dependency resolution completed:
+Unchanged:
+  connection 1.1.0
+  cowboy 2.8.0
+  cowboy_telemetry 0.3.1
+  cowlib 2.9.1
+  db_connection 2.3.1
+  decimal 2.0.0
+  ecto 3.5.8
+  ecto_sql 3.5.4
+  gettext 0.18.2
+  jason 1.2.2
+  mime 1.5.0
+  phoenix 1.5.8
+  phoenix_ecto 4.2.1
+  phoenix_html 2.14.3
+  phoenix_live_dashboard 0.4.0
+  phoenix_live_view 0.15.4
+  phoenix_pubsub 2.0.0
+  plug 1.11.0
+  plug_cowboy 2.4.1
+  plug_crypto 1.2.1
+  postgrex 0.15.8
+  ranch 1.7.1
+  telemetry 0.4.2
+  telemetry_metrics 0.6.0
+  telemetry_poller 0.5.1
+All dependencies are up to date
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+mkdir: cannot create directory '': No such file or directory
+npm WARN npm npm does not support Node.js v10.24.0
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+npm WARN sass-loader@8.0.2 requires a peer of sass@^1.3.0 but none is installed. You must install peer dependencies yourself.
+npm WARN sass-loader@8.0.2 requires a peer of fibers@>= 3.1.0 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/watchpack-chokidar2/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+up to date in 10.521s
+npm WARN npm npm does not support Node.js v10.24.0
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+
+> @ deploy /home/events/cs4550-hw07/assets
+> webpack --mode production
+
+Hash: a35f5e0e8a4e79f10088
+Version: webpack 4.41.5
+Time: 5604ms
+Built at: 03/05/2021 9:32:52 PM
+         Asset       Size  Chunks             Chunk Names
+../css/app.css    141 KiB       0  [emitted]  app
+../favicon.ico   1.23 KiB          [emitted]  
+ ../robots.txt  202 bytes          [emitted]  
+        app.js   2.25 KiB       0  [emitted]  app
+Entrypoint app = ../css/app.css app.js
+[0] multi ./js/app.js 28 bytes {0} [built]
+[1] ./js/app.js 490 bytes {0} [built]
+[2] ./css/app.scss 39 bytes {0} [built]
+[3] ../deps/phoenix_html/priv/static/phoenix_html.js 2.21 KiB {0} [built]
+    + 1 hidden module
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js!node_modules/sass-loader/dist/cjs.js!css/app.scss:
+    Entrypoint mini-css-extract-plugin = *
+    [0] ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./css/app.scss 144 KiB {0} [built]
+        + 1 hidden module
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Check your digested files at "priv/static"
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Release events_board-0.1.0 already exists. Overwrite? [Yn] Y
+* assembling events_board-0.1.0 on MIX_ENV=prod
+* skipping runtime configuration (config/runtime.exs not found)
+* skipping elixir.bat for windows (bin/elixir.bat not found in the Elixir installation)
+* skipping iex.bat for windows (bin/iex.bat not found in the Elixir installation)
+
+Release created at _build/prod/rel/events_board!
+
+    # To start your system
+    _build/prod/rel/events_board/bin/events_board start
+
+Once the release is running:
+
+    # To connect to it remotely
+    _build/prod/rel/events_board/bin/events_board remote
+
+    # To stop it gracefully (you may also send SIGINT/SIGTERM)
+    _build/prod/rel/events_board/bin/events_board stop
+
+To list all commands:
+
+    _build/prod/rel/events_board/bin/events_board
+
+root@jkserver:/home/events/cs4550-hw07# cat ~/.config/events_board/db_pass
+cat: /root/.config/events_board/db_pass: No such file or directory
+root@jkserver:/home/events/cs4550-hw07# vim deploy.sh
+root@jkserver:/home/events/cs4550-hw07# bash deploy.sh
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Resolving Hex dependencies...
+Dependency resolution completed:
+Unchanged:
+  connection 1.1.0
+  cowboy 2.8.0
+  cowboy_telemetry 0.3.1
+  cowlib 2.9.1
+  db_connection 2.3.1
+  decimal 2.0.0
+  ecto 3.5.8
+  ecto_sql 3.5.4
+  gettext 0.18.2
+  jason 1.2.2
+  mime 1.5.0
+  phoenix 1.5.8
+  phoenix_ecto 4.2.1
+  phoenix_html 2.14.3
+  phoenix_live_dashboard 0.4.0
+  phoenix_live_view 0.15.4
+  phoenix_pubsub 2.0.0
+  plug 1.11.0
+  plug_cowboy 2.4.1
+  plug_crypto 1.2.1
+  postgrex 0.15.8
+  ranch 1.7.1
+  telemetry 0.4.2
+  telemetry_metrics 0.6.0
+  telemetry_poller 0.5.1
+All dependencies are up to date
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+mkdir: cannot create directory '': No such file or directory
+root@jkserver:/home/events/cs4550-hw07# vim deploy.sh
+root@jkserver:/home/events/cs4550-hw07# vim start.sh
+root@jkserver:/home/events/cs4550-hw07# bash deploy.sh
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Resolving Hex dependencies...
+Dependency resolution completed:
+Unchanged:
+  connection 1.1.0
+  cowboy 2.8.0
+  cowboy_telemetry 0.3.1
+  cowlib 2.9.1
+  db_connection 2.3.1
+  decimal 2.0.0
+  ecto 3.5.8
+  ecto_sql 3.5.4
+  gettext 0.18.2
+  jason 1.2.2
+  mime 1.5.0
+  phoenix 1.5.8
+  phoenix_ecto 4.2.1
+  phoenix_html 2.14.3
+  phoenix_live_dashboard 0.4.0
+  phoenix_live_view 0.15.4
+  phoenix_pubsub 2.0.0
+  plug 1.11.0
+  plug_cowboy 2.4.1
+  plug_crypto 1.2.1
+  postgrex 0.15.8
+  ranch 1.7.1
+  telemetry 0.4.2
+  telemetry_metrics 0.6.0
+  telemetry_poller 0.5.1
+All dependencies are up to date
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+mkdir: cannot create directory '': No such file or directory
+npm WARN npm npm does not support Node.js v10.24.0
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+npm WARN sass-loader@8.0.2 requires a peer of sass@^1.3.0 but none is installed. You must install peer dependencies yourself.
+npm WARN sass-loader@8.0.2 requires a peer of fibers@>= 3.1.0 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/watchpack-chokidar2/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+up to date in 10.808s
+npm WARN npm npm does not support Node.js v10.24.0
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+
+> @ deploy /home/events/cs4550-hw07/assets
+> webpack --mode production
+
+Hash: a35f5e0e8a4e79f10088
+Version: webpack 4.41.5
+Time: 5409ms
+Built at: 03/05/2021 9:37:52 PM
+         Asset       Size  Chunks             Chunk Names
+../css/app.css    141 KiB       0  [emitted]  app
+../favicon.ico   1.23 KiB          [emitted]  
+ ../robots.txt  202 bytes          [emitted]  
+        app.js   2.25 KiB       0  [emitted]  app
+Entrypoint app = ../css/app.css app.js
+[0] multi ./js/app.js 28 bytes {0} [built]
+[1] ./js/app.js 490 bytes {0} [built]
+[2] ./css/app.scss 39 bytes {0} [built]
+[3] ../deps/phoenix_html/priv/static/phoenix_html.js 2.21 KiB {0} [built]
+    + 1 hidden module
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js!node_modules/sass-loader/dist/cjs.js!css/app.scss:
+    Entrypoint mini-css-extract-plugin = *
+    [0] ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./css/app.scss 144 KiB {0} [built]
+        + 1 hidden module
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Check your digested files at "priv/static"
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Release events_board-0.1.0 already exists. Overwrite? [Yn] Y
+* assembling events_board-0.1.0 on MIX_ENV=prod
+* skipping runtime configuration (config/runtime.exs not found)
+* skipping elixir.bat for windows (bin/elixir.bat not found in the Elixir installation)
+* skipping iex.bat for windows (bin/iex.bat not found in the Elixir installation)
+
+Release created at _build/prod/rel/events_board!
+
+    # To start your system
+    _build/prod/rel/events_board/bin/events_board start
+
+Once the release is running:
+
+    # To connect to it remotely
+    _build/prod/rel/events_board/bin/events_board remote
+
+    # To stop it gracefully (you may also send SIGINT/SIGTERM)
+    _build/prod/rel/events_board/bin/events_board stop
+
+To list all commands:
+
+    _build/prod/rel/events_board/bin/events_board
+
+root@jkserver:/home/events/cs4550-hw07# vim deploy.sh
+root@jkserver:/home/events/cs4550-hw07# vim deploy.sh
+root@jkserver:/home/events/cs4550-hw07# bash deploy.sh
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Resolving Hex dependencies...
+Dependency resolution completed:
+Unchanged:
+  connection 1.1.0
+  cowboy 2.8.0
+  cowboy_telemetry 0.3.1
+  cowlib 2.9.1
+  db_connection 2.3.1
+  decimal 2.0.0
+  ecto 3.5.8
+  ecto_sql 3.5.4
+  gettext 0.18.2
+  jason 1.2.2
+  mime 1.5.0
+  phoenix 1.5.8
+  phoenix_ecto 4.2.1
+  phoenix_html 2.14.3
+  phoenix_live_dashboard 0.4.0
+  phoenix_live_view 0.15.4
+  phoenix_pubsub 2.0.0
+  plug 1.11.0
+  plug_cowboy 2.4.1
+  plug_crypto 1.2.1
+  postgrex 0.15.8
+  ranch 1.7.1
+  telemetry 0.4.2
+  telemetry_metrics 0.6.0
+  telemetry_poller 0.5.1
+All dependencies are up to date
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+mkdir: cannot create directory '': No such file or directory
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+The database for EventsBoard.Repo has been created
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+
+21:38:50.242 [info]  == Running 20210305200521 EventsBoard.Repo.Migrations.CreateEvents.change/0 forward
+
+21:38:50.250 [info]  create table events
+
+21:38:50.261 [info]  == Migrated 20210305200521 in 0.0s
+
+21:38:50.314 [info]  == Running 20210305200749 EventsBoard.Repo.Migrations.CreateUsers.change/0 forward
+
+21:38:50.315 [info]  create table users
+
+21:38:50.320 [info]  == Migrated 20210305200749 in 0.0s
+npm WARN npm npm does not support Node.js v10.24.0
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+npm WARN sass-loader@8.0.2 requires a peer of sass@^1.3.0 but none is installed. You must install peer dependencies yourself.
+npm WARN sass-loader@8.0.2 requires a peer of fibers@>= 3.1.0 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/watchpack-chokidar2/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+up to date in 10.691s
+npm WARN npm npm does not support Node.js v10.24.0
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+
+> @ deploy /home/events/cs4550-hw07/assets
+> webpack --mode production
+
+Hash: a35f5e0e8a4e79f10088
+Version: webpack 4.41.5
+Time: 5797ms
+Built at: 03/05/2021 9:39:11 PM
+         Asset       Size  Chunks             Chunk Names
+../css/app.css    141 KiB       0  [emitted]  app
+../favicon.ico   1.23 KiB          [emitted]  
+ ../robots.txt  202 bytes          [emitted]  
+        app.js   2.25 KiB       0  [emitted]  app
+Entrypoint app = ../css/app.css app.js
+[0] multi ./js/app.js 28 bytes {0} [built]
+[1] ./js/app.js 490 bytes {0} [built]
+[2] ./css/app.scss 39 bytes {0} [built]
+[3] ../deps/phoenix_html/priv/static/phoenix_html.js 2.21 KiB {0} [built]
+    + 1 hidden module
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js!node_modules/sass-loader/dist/cjs.js!css/app.scss:
+    Entrypoint mini-css-extract-plugin = *
+    [0] ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./css/app.scss 144 KiB {0} [built]
+        + 1 hidden module
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Check your digested files at "priv/static"
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Release events_board-0.1.0 already exists. Overwrite? [Yn] Y
+* assembling events_board-0.1.0 on MIX_ENV=prod
+* skipping runtime configuration (config/runtime.exs not found)
+* skipping elixir.bat for windows (bin/elixir.bat not found in the Elixir installation)
+* skipping iex.bat for windows (bin/iex.bat not found in the Elixir installation)
+
+Release created at _build/prod/rel/events_board!
+
+    # To start your system
+    _build/prod/rel/events_board/bin/events_board start
+
+Once the release is running:
+
+    # To connect to it remotely
+    _build/prod/rel/events_board/bin/events_board remote
+
+    # To stop it gracefully (you may also send SIGINT/SIGTERM)
+    _build/prod/rel/events_board/bin/events_board stop
+
+To list all commands:
+
+    _build/prod/rel/events_board/bin/events_board
+
+root@jkserver:/home/events/cs4550-hw07# bash start.sh
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+21:39:59.662 [info] Running EventsBoardWeb.Endpoint with cowboy 2.8.0 at :::4793 (http)
+21:39:59.663 [info] Access EventsBoardWeb.Endpoint at http://events.jk-web.site
+21:40:15.773 request_id=FmmggKT67484Uk8AAACx [info] GET /
+21:40:15.785 request_id=FmmggKT67484Uk8AAACx [info] Sent 200 in 11ms
+21:40:59.148 request_id=Fmmgir5c1cMhcw8AAADh [info] GET /users/new
+21:40:59.153 request_id=Fmmgir5c1cMhcw8AAADh [info] Sent 200 in 4ms
+21:41:03.938 request_id=Fmmgi9vXePuVtRcAAADx [info] POST /users
+21:41:03.944 request_id=Fmmgi9vXePuVtRcAAADx [info] Sent 302 in 6ms
+21:41:03.958 request_id=Fmmgi90GUOQ8NqMAAAEB [info] GET /users/1
+21:41:03.963 request_id=Fmmgi90GUOQ8NqMAAAEB [info] Sent 200 in 5ms
+21:41:06.638 request_id=FmmgjHzJUhAF_xQAAAER [info] POST /sessions
+21:41:06.645 request_id=FmmgjHzJUhAF_xQAAAER [info] Sent 302 in 7ms
+21:41:06.658 request_id=FmmgjH34b4b4hEsAAAEx [info] GET /
+21:41:06.662 request_id=FmmgjH34b4b4hEsAAAEx [info] Sent 200 in 4ms
+21:41:08.270 request_id=FmmgjN4JxjMiUhIAAAFB [info] GET /events/new
+21:41:08.271 request_id=FmmgjN4JxjMiUhIAAAFB [info] Sent 200 in 1ms
+21:41:22.307 request_id=FmmgkCK857Q_xewAAAFR [info] POST /events
+21:41:22.314 request_id=FmmgkCK857Q_xewAAAFR [info] Sent 302 in 7ms
+21:41:22.331 request_id=FmmgkCQnPU5O67sAAAFh [info] GET /events/1
+21:41:22.336 request_id=FmmgkCQnPU5O67sAAAFh [info] Sent 200 in 5ms
+21:41:24.845 request_id=FmmgkLoAeiGl3B0AAAGB [info] GET /
+21:41:24.850 request_id=FmmgkLoAeiGl3B0AAAGB [info] Sent 200 in 4ms
+^C
+BREAK: (a)bort (A)bort with dump (c)ontinue (p)roc info (i)nfo
+       (l)oaded (v)ersion (k)ill (D)b-tables (d)istribution
+a
+root@jkserver:/home/events/cs4550-hw07# bash deploy.sh
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Resolving Hex dependencies...
+Dependency resolution completed:
+Unchanged:
+  connection 1.1.0
+  cowboy 2.8.0
+  cowboy_telemetry 0.3.1
+  cowlib 2.9.1
+  db_connection 2.3.1
+  decimal 2.0.0
+  ecto 3.5.8
+  ecto_sql 3.5.4
+  gettext 0.18.2
+  jason 1.2.2
+  mime 1.5.0
+  phoenix 1.5.8
+  phoenix_ecto 4.2.1
+  phoenix_html 2.14.3
+  phoenix_live_dashboard 0.4.0
+  phoenix_live_view 0.15.4
+  phoenix_pubsub 2.0.0
+  plug 1.11.0
+  plug_cowboy 2.4.1
+  plug_crypto 1.2.1
+  postgrex 0.15.8
+  ranch 1.7.1
+  telemetry 0.4.2
+  telemetry_metrics 0.6.0
+  telemetry_poller 0.5.1
+All dependencies are up to date
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+mkdir: cannot create directory '': No such file or directory
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+The database for EventsBoard.Repo has already been created
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+
+21:48:06.884 [info]  Migrations already up
+npm WARN npm npm does not support Node.js v10.24.0
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+npm WARN sass-loader@8.0.2 requires a peer of sass@^1.3.0 but none is installed. You must install peer dependencies yourself.
+npm WARN sass-loader@8.0.2 requires a peer of fibers@>= 3.1.0 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.3.2 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/watchpack-chokidar2/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+up to date in 10.673s
+npm WARN npm npm does not support Node.js v10.24.0
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 4, 6, 7, 8, 9.
+npm WARN npm You can find the latest version at https://nodejs.org/
+
+> @ deploy /home/events/cs4550-hw07/assets
+> webpack --mode production
+
+Hash: a35f5e0e8a4e79f10088
+Version: webpack 4.41.5
+Time: 5492ms
+Built at: 03/05/2021 9:48:27 PM
+         Asset       Size  Chunks             Chunk Names
+../css/app.css    141 KiB       0  [emitted]  app
+../favicon.ico   1.23 KiB          [emitted]  
+ ../robots.txt  202 bytes          [emitted]  
+        app.js   2.25 KiB       0  [emitted]  app
+Entrypoint app = ../css/app.css app.js
+[0] multi ./js/app.js 28 bytes {0} [built]
+[1] ./js/app.js 490 bytes {0} [built]
+[2] ./css/app.scss 39 bytes {0} [built]
+[3] ../deps/phoenix_html/priv/static/phoenix_html.js 2.21 KiB {0} [built]
+    + 1 hidden module
+Child mini-css-extract-plugin node_modules/css-loader/dist/cjs.js!node_modules/sass-loader/dist/cjs.js!css/app.scss:
+    Entrypoint mini-css-extract-plugin = *
+    [0] ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./css/app.scss 144 KiB {0} [built]
+        + 1 hidden module
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Check your digested files at "priv/static"
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+Release events_board-0.1.0 already exists. Overwrite? [Yn] Y
+* assembling events_board-0.1.0 on MIX_ENV=prod
+* skipping runtime configuration (config/runtime.exs not found)
+* skipping elixir.bat for windows (bin/elixir.bat not found in the Elixir installation)
+* skipping iex.bat for windows (bin/iex.bat not found in the Elixir installation)
+
+Release created at _build/prod/rel/events_board!
+
+    # To start your system
+    _build/prod/rel/events_board/bin/events_board start
+
+Once the release is running:
+
+    # To connect to it remotely
+    _build/prod/rel/events_board/bin/events_board remote
+
+    # To stop it gracefully (you may also send SIGINT/SIGTERM)
+    _build/prod/rel/events_board/bin/events_board stop
+
+To list all commands:
+
+    _build/prod/rel/events_board/bin/events_board
+
+root@jkserver:/home/events/cs4550-hw07# bash start.sh
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+21:50:06.338 [info] Running EventsBoardWeb.Endpoint with cowboy 2.8.0 at :::4793 (http)
+21:50:06.339 [info] Access EventsBoardWeb.Endpoint at http://events.jk-web.site
+^C
+BREAK: (a)bort (A)bort with dump (c)ontinue (p)roc info (i)nfo
+       (l)oaded (v)ersion (k)ill (D)b-tables (d)istribution
+a
+root@jkserver:/home/events/cs4550-hw07# chmod a+x start.sh
+root@jkserver:/home/events/cs4550-hw07# ls -l
+total 56
+-rw-r--r--  1 events events  741 Mar  5 21:01 README.md
+drwxr-xr-x  3 events events 4096 Mar  5 21:03 _build
+drwxr-xr-x  7 events events 4096 Mar  5 21:07 assets
+drwxr-xr-x  2 events events 4096 Mar  5 21:01 config
+-rwxr-xr-x  1 events events  827 Mar  5 21:38 deploy.sh
+drwxr-xr-x 27 events events 4096 Mar  5 21:03 deps
+drwxr-xr-x  4 events events 4096 Mar  5 21:01 lib
+-rw-r--r--  1 events events 1841 Mar  5 21:01 mix.exs
+-rw-r--r--  1 events events 9320 Mar  5 21:01 mix.lock
+drwxr-xr-x  5 events events 4096 Mar  5 21:07 priv
+-rwxr-xr-x  1 events events  375 Mar  5 21:37 start.sh
+drwxr-xr-x  5 events events 4096 Mar  5 21:01 test
+root@jkserver:/home/events/cs4550-hw07# bash start.sh
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+21:55:36.802 [info] Running EventsBoardWeb.Endpoint with cowboy 2.8.0 at :::4793 (http)
+21:55:36.803 [info] Access EventsBoardWeb.Endpoint at http://events.jk-web.site
+21:55:42.621 request_id=FmmhWHFqoFw4Uk8AAACx [info] GET /
+21:55:42.631 request_id=FmmhWHFqoFw4Uk8AAACx [info] Sent 200 in 10ms
+21:55:43.248 request_id=FmmhWJbNn4f9fGkAAADh [info] GET /
+21:55:43.250 request_id=FmmhWJbNn4f9fGkAAADh [info] Sent 200 in 1ms
+21:55:43.820 request_id=FmmhWLjkxgMhcw8AAADx [info] GET /
+21:55:43.824 request_id=FmmhWLjkxgMhcw8AAADx [info] Sent 200 in 3ms
+^C
+BREAK: (a)bort (A)bort with dump (c)ontinue (p)roc info (i)nfo
+       (l)oaded (v)ersion (k)ill (D)b-tables (d)istribution
+a
+root@jkserver:/home/events/cs4550-hw07# bash start.sh
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+22:12:23.582 [info] Running EventsBoardWeb.Endpoint with cowboy 2.8.0 at :::4793 (http)
+22:12:23.584 [info] Access EventsBoardWeb.Endpoint at http://events.jk-web.site
+22:12:30.555 request_id=FmmiQx79N9M4Uk8AAACx [info] GET /
+22:12:30.565 request_id=FmmiQx79N9M4Uk8AAACx [info] Sent 200 in 9ms
+^C 
+BREAK: (a)bort (A)bort with dump (c)ontinue (p)roc info (i)nfo
+       (l)oaded (v)ersion (k)ill (D)b-tables (d)istribution
+a
+root@jkserver:/home/events/cs4550-hw07# cd /etc/nginx/sites-available
+root@jkserver:/etc/nginx/sites-available# ls
+default  events.nginx  hw01.jk-web.site  hw02.jk-web.site  hw03.jk-web.site  hw04.nginx  hw05.nginx  jk-web.site
+root@jkserver:/etc/nginx/sites-available# vim events.nginx
+root@jkserver:/etc/nginx/sites-available# cd /home/events/cs4550-hw07/
+root@jkserver:/home/events/cs4550-hw07# bash start.sh
+warning: the VM is running with native name encoding of latin1 which may cause Elixir to malfunction as it expects utf8. Please ensure your locale is set to UTF-8 (which can be verified by running "locale" in your shell)
+22:21:52.310 [info] Running EventsBoardWeb.Endpoint with cowboy 2.8.0 at :::4793 (http)
+22:21:52.312 [info] Access EventsBoardWeb.Endpoint at http://events.jk-web.site
+22:21:56.321 request_id=FmmixtlFZTM4Uk8AAACx [info] GET /
+22:21:56.329 request_id=FmmixtlFZTM4Uk8AAACx [info] Sent 200 in 8ms
+logout
+^C
+BREAK: (a)bort (A)bort with dump (c)ontinue (p)roc info (i)nfo
+       (l)oaded (v)ersion (k)ill (D)b-tables (d)istribution
+a
+root@jkserver:/home/events/cs4550-hw07# chmod ugo+rwx /home/events/cs4550-hw07/_build/prod/rel/events_board/releases/0.1.0/elixir
+root@jkserver:/home/events/cs4550-hw07# cd /etc/systemd
+root@jkserver:/etc/systemd# cd service
+-bash: cd: service: No such file or directory
+root@jkserver:/etc/systemd# ls
+journald.conf  network	      resolved.conf  system	  timesyncd.conf  user.conf
+logind.conf    networkd.conf  sleep.conf     system.conf  user
+root@jkserver:/etc/systemd# cd /etc/systemd/system
+root@jkserver:/etc/systemd/system# ls
+apt-daily.service			evb.service	      hw04.service		   sshd.service
+bulls.service				events_board.service  multi-user.target.wants	   sysinit.target.wants
+dbus-org.freedesktop.timesync1.service	evt.service	      network-online.target.wants  syslog.service
+erlang-solutions_2.0_all.deb		getty.target.wants    sockets.target.wants	   timers.target.wants
+root@jkserver:/etc/systemd/system# vim evb.service
+root@jkserver:/etc/systemd/system# cd /etc/nginx/sites-
+-bash: cd: /etc/nginx/sites-: No such file or directory
+root@jkserver:/etc/systemd/system# cd /etc/nginx/sites-available/
+root@jkserver:/etc/nginx/sites-available# vim events.nginx
+
+server {
+    listen 80;
+    listen [::]:80;
+
+    # TODO: This should be your server name.
+    server_name events.jk-web.site;
+
+    location / {
+        proxy_pass http://localhost:4793;
+    }
+
+    location /socket {
+        proxy_pass http://localhost:4793;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+} 

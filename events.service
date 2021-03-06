@@ -1,0 +1,15 @@
+[Unit]
+Description=HW07 Events App
+
+[Service]
+Type=simple
+User=events
+Group=events
+Restart=on-failure
+Environment=LANG=en_US.UTF-8
+
+WorkingDirectory=/home/events/cs4550-hw07
+ExecStart=/bin/bash /home/events/cs4550-hw07/start.sh
+
+[Install]
+WantedBy=multi-user.target
