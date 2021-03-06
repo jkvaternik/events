@@ -1,0 +1,21 @@
+<div class="row" style="margin-bottom: 20px">
+  <div class="col">
+    <h1 style="display: inline-block;">Events</h1>
+    <button class="btn btn-primary" style="float:right"><%= link "Create Event", to: Routes.event_path(@conn, :new), class: "button-link" %></button>
+  </div>
+</div>
+
+<div class="row">
+  <%= for event <- @events do %>
+    <div class="col-sm-4 card">
+      <div class="card-body">
+        <h5 class="card-title"><%= event.name %></h5>
+        <h6 class="card-subtitle mb-2 text-muted"><%= DateTime.to_date(event.date) %>, <%= DateTime.to_time(event.date) %></h6>
+        <p class="card-text"><%= event.desc %></p>
+        <span><%= link "Show", to: Routes.event_path(@conn, :show, event) %></span>
+        <span><%= link "Edit", to: Routes.event_path(@conn, :edit, event) %></span>
+        <span><%= link "Delete", to: Routes.event_path(@conn, :delete, event), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </div>
+    </div>
+  <% end %>
+</div>

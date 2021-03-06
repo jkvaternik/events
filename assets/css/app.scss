@@ -1,0 +1,32 @@
+/* This file is for your main application css. */
+@import "bootstrap";
+
+body {
+  margin: 30px 0;
+}
+
+main {
+  margin: 20px 0;
+}
+
+.button-link {
+  color: #ffffff;
+}
+
+.button-link :hover {
+  color: #ffffff;
+}
+
+
+.button-link :active {
+  color: #ffffff;
+}
+
+.button-link :visited {
+  color: #ffffff;
+}
+
+.invalid-feedback {
+  display: block;
+}
+
