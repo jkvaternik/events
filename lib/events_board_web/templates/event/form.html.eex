@@ -17,7 +17,7 @@
   <div class="row">
     <div class="col">
       <%= label f, :date %>
-      <%= datetime_local_input f, :date, class: "form-control", required: true %>
+      <%= datetime_local_input f, :date, class: "form-control", placeholder: "YYYY-MM-DD --:--:--Z", required: true %>
       <%= error_tag f, :date %>
     </div>
   </div>
