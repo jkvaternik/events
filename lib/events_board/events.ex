@@ -19,6 +19,9 @@ defmodule EventsBoard.Events do
   """
   def list_events do
     Repo.all(Event)
+    |> Repo.preload(:user)
+    |> Repo.preload(:invites)
+    |> Repo.preload([comments: :user])
   end
 
   @doc """
@@ -101,4 +104,11 @@ defmodule EventsBoard.Events do
   def change_event(%Event{} = event, attrs \\ %{}) do
     Event.changeset(event, attrs)
   end
+
+  def load_comments_invites(%Event{} = event) do
+    event
+    |> Repo.preload(:invites)
+    |> Repo.preload([comments: :user])
+  end
+
 end

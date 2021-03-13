@@ -3,8 +3,9 @@ defmodule EventsBoard.Repo.Migrations.CreateUsers do
 
   def change do
     create table(:users) do
-      add :name, :string
-      add :email, :string
+      add :name, :string, null: false
+      add :email, :string, null: false
+      add :photo_hash, :text, null: false
 
       timestamps()
     end

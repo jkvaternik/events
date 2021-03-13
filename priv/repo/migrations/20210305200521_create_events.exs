@@ -6,6 +6,7 @@ defmodule EventsBoard.Repo.Migrations.CreateEvents do
       add :name, :string
       add :date, :utc_datetime
       add :desc, :text
+      add :user_id, references(:users), null: false
 
       timestamps()
     end

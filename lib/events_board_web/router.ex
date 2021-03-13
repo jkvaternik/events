@@ -20,8 +20,11 @@ defmodule EventsBoardWeb.Router do
     get "/", PageController, :index
     resources "/events", EventController
     resources "/users", UserController
+    get "/users/photo/:id", UserController, :photo
     resources "/sessions", SessionController,
       only: [:create, :delete], singleton: true
+    resources "/comments", CommentController
+    resources "/invites", InviteController
   end
 
   # Other scopes may use custom stacks.

@@ -1,23 +1,124 @@
-<h1>Show Event</h1>
+<%= if have_current_user?(@conn) do %>
+  <%= if current_user_id?(@conn, @event.user_id) || invited?(@conn, @event.invites) do %>
+    <h1>Show Event</h1>
 
-<ul>
+    <p>
+      <strong>Name:</strong>
+      <%= @event.name %>
+    </span>
 
-  <li>
-    <strong>Name:</strong>
-    <%= @event.name %>
-  </li>
+    <p>
+      <strong>Date:</strong>
+      <%= @event.date %>
+    </p>
 
-  <li>
-    <strong>Date:</strong>
-    <%= @event.date %>
-  </li>
+    <p>
+      <strong>Desc:</strong>
+      <%= @event.desc %>
+    </p>
 
-  <li>
-    <strong>Desc:</strong>
-    <%= @event.desc %>
-  </li>
+    <span>
+      <strong>Owner:</strong>
+     <img class="profile-img" src="<%= Routes.user_path(@conn, :photo, @event.user_id) %>" alt="" style="width: 20px; height: 20px;" />
+        <%= EventsBoard.Users.get_user(@event.user_id).name %>
+    </span>
 
-</ul>
 
-<span><%= link "Edit", to: Routes.event_path(@conn, :edit, @event) %></span>
-<span><%= link "Back", to: Routes.event_path(@conn, :index) %></span>
+
+    <br>
+    <hr>
+
+    <span><%= link "Back", to: Routes.event_path(@conn, :index) %></span>
+    <%= if current_user_id?(@conn, @event.user_id) do %>
+      <span><%= link "Edit", to: Routes.event_path(@conn, :edit, @event) %></span>
+      <h2>Invite Friends</h2>
+      <%= render(
+        EventsBoardWeb.InviteView,
+        "form.html",
+        changeset: @new_invite,
+        action: Routes.invite_path(@conn, :create)
+      ) %>
+      <br>
+      <h4>Invite link</h4>
+      <p>
+        <%= String.slice(EventsBoardWeb.Router.Helpers.page_url(EventsBoardWeb.Endpoint, :index), 0..-2)
+          <> Routes.event_path(@conn, :show, @event) %>
+      </p>
+    <% end %>
+
+    <%= if invited?(@conn, @event.invites) do %>
+      <% invite = get_invite(@conn, @event.invites) %>
+      <%= if invite != nil do %>
+        <h2>Will you be attending?</h2>
+        <%= render(
+          EventsBoardWeb.InviteView,
+          "resp.html",
+          changeset: EventsBoard.Invites.change_invite(invite),
+          action: Routes.invite_path(@conn, :update, invite),
+          eventId: @event.id,
+          email: invite.email
+        ) %>
+      <% end %>
+    <% end %>
+
+    <br>
+
+    <h4>Invited Friends</h4>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Responses</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        <%= for inv <- @event.invites do %>
+          <tr>
+            <td><%= inv.email %></td>
+            <td><%= inv.resp %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+
+    <br>
+    <hr>
+
+    <h2>Add Comment</h2>
+    <%= if have_current_user?(@conn) do %>
+      <%= render(
+        EventsBoardWeb.CommentView,
+        "form.html",
+        changeset: @new_comment,
+        action: Routes.comment_path(@conn, :create)
+      ) %>
+    <% end %>
+
+    <h2>Comments</h2>
+    <%= for comm <- @event.comments do %>
+      <div class="card">
+        <div class="card-body">
+          <span>
+            <img class="profile-img" src="<%= Routes.user_path(@conn, :photo, comm.user) %>" alt="" style="width: 20px; height: 20px;">
+            <%= comm.user.name %>
+          </span>
+          <p class="card-text"><%= comm.body %></p>
+          <%= if current_user_id?(@conn, comm.user_id) do %>
+            <span><%= link "Edit", to: Routes.comment_path(@conn, :edit, comm) %></span>
+          <% end %>
+          <%= if current_user_id?(@conn, comm.user_id) || current_user_id?(@conn, @event.user_id) do %>
+            <span><%= link "Delete", to: Routes.comment_path(@conn, :delete, comm), method: :delete, data: [confirm: "Are you sure?"] %></span>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  <%= if (current_user_id?(@conn, @event.user_id) || invited?(@conn, @event.invites)) == false do %>
+  <p class="alert alert-info">You must the owner of the event or invited to the event to view.</p>
+  <% end %>
+<% end %>
+
+<% if have_current_user?(@conn) == false do %>
+  <p class="alert alert-info">You must be logged in to view the event.</p>
+<% end %>

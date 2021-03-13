@@ -8,7 +8,7 @@
   <div class="row">
     <div class="col">
       <%= label f, :name %>
-      <%= text_input f, :name, class: "form-control" %>
+      <%= text_input f, :name, class: "form-control", required: true %>
       <%= error_tag f, :name %>
     </div>
   </div>
@@ -17,7 +17,7 @@
   <div class="row">
     <div class="col">
       <%= label f, :date %>
-      <%= datetime_local_input f, :date, class: "form-control" %>
+      <%= datetime_local_input f, :date, class: "form-control", required: true %>
       <%= error_tag f, :date %>
     </div>
   </div>
@@ -26,7 +26,7 @@
   <div class="row">
     <div class="col">
       <%= label f, :desc %>
-      <%= textarea f, :desc, class: "form-control" %>
+      <%= textarea f, :desc, class: "form-control", required: true %>
       <%= error_tag f, :desc %>
     </div>
   </div>

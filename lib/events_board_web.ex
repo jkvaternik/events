@@ -23,6 +23,7 @@ defmodule EventsBoardWeb do
 
       import Plug.Conn
       import EventsBoardWeb.Gettext
+      import EventsBoardWeb.Helpers
       alias EventsBoardWeb.Router.Helpers, as: Routes
     end
   end
@@ -68,6 +69,7 @@ defmodule EventsBoardWeb do
 
       import EventsBoardWeb.ErrorHelpers
       import EventsBoardWeb.Gettext
+      import EventsBoardWeb.Helpers
       alias EventsBoardWeb.Router.Helpers, as: Routes
     end
   end
