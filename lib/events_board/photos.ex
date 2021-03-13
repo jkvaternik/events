@@ -42,7 +42,6 @@ defmodule EventsBoard.Photos do
 
   def base_path(hash) do
     Path.expand("~/.local/data/photo_blog")
-    |> Path.join("#{Mix.env}")
     |> Path.join(String.slice(hash, 0, 2))
     |> Path.join(String.slice(hash, 2, 30))
   end
